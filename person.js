@@ -1,4 +1,4 @@
-module.exports = class Employee{
+class Employee{
     fullName;
     name;
     birthday;
@@ -8,7 +8,7 @@ module.exports = class Employee{
         this.birthday = birthday
     }
 }
-module.exports = class Client{
+class Client{
     fullName;
     name;
     birthday;
@@ -18,3 +18,5 @@ module.exports = class Client{
         this.birthday = birthday
     }
 }
+
+module.exports = {Client, Employee}

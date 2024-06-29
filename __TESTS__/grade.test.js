@@ -1,10 +1,10 @@
 const average = require("../grade.js")
 
-describe("Checking student grade",()=>{
-    test("shoud return true for grades 6, 7 and 5", ()=>{
-        expect(average(6, 7, 5)).toBeTruthy()
+describe("Checking student grades",()=>{
+    test("shoud check if the average of the grades 7, 7 and 8 is greater than 6", ()=>{
+        expect(average(7, 7, 8)).toBeGreaterThan(6)
     })
-    test("shoud return false for grades 5, 7 and 5", ()=>{
-        expect(average(5, 7, 5)).toBeFalsy()
+    test("shoud check if the average of the grades 6, 6 and 6 is greater than or equal to 6", ()=>{
+        expect(average(6, 6, 6)).toBeGreaterThanOrEqual(6)
     })
 })

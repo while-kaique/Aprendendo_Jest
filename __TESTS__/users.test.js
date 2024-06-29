@@ -1,10 +1,10 @@
 const users = require("../users.js")
 
-describe("Checking length of items of array", ()=>{
-    test("should check if array has 3 items",()=>{
-        expect(users).toHaveLength(3)
+describe("Checking items of array", ()=>{
+    test("should check if the array contain the user Maria",()=>{
+        expect(users).toContain("Breno")
     })
-    test("should check if the index of item 3 is 3 or 4 characters wide", ()=>{
-        expect(users[2]).toHaveLength(5)
+    test("should check if the array does not contain the user Cagão", ()=>{
+        expect(users[2]).not.toContain("Cagão")
     })
 })

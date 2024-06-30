@@ -1,10 +1,8 @@
 const users = require("../users.js")
 
-describe("Checking items of array", ()=>{
-    test("should check if the array contain the user Maria",()=>{
-        expect(users).toContain("Breno")
-    })
-    test("should check if the array does not contain the user Cagão", ()=>{
-        expect(users[2]).not.toContain("Cagão")
+describe("Checking items of the array users", ()=>{
+    test("should check if the array contain all the items in another array",()=>{
+        var expectArray = ["Thomas", "Breno"]
+        expect(users).toEqual(expect.arrayContaining(expectArray))
     })
 })

@@ -1,8 +1,10 @@
-const users = require("../users.js")
+const division = require("../users.js")
 
-describe("Checking items of the array users", ()=>{
-    test("should check if the array contain all the items in another array",()=>{
-        var expectArray = ["Thomas", "Breno"]
-        expect(users).toEqual(expect.arrayContaining(expectArray))
+describe("Checking exceptions of the division", ()=>{
+    test("should check if the divider 0 return an error",()=>{
+        expect(()=>{division(10, 0)}).toThrow()
+    })
+    test("shpuld check if another divider different from 0 doesn't return an error",()=>{
+        expect(()=>{division(10, 2)}).not.toThrow()
     })
 })
